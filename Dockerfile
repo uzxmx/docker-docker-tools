@@ -1,4 +1,5 @@
-FROM docker:19.03.6
+ARG TAG
+FROM docker:${TAG}
 
 RUN apk add --no-cache \
   git \

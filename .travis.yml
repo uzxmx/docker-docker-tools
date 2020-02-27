@@ -1,0 +1,13 @@
+language: minimal
+
+services:
+  - docker
+
+env:
+  - DOCKER_TAG=19.03.5
+  - DOCKER_TAG=19.03.6
+
+script:
+  - make login
+  - make build
+  - make image_push
